@@ -13,15 +13,21 @@
       padding: 0;
     }
 
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Контейнер для ссылок */
     .social-container {
-      margin-top: 20px;
+      margin-top: 50px;
     }
 
     .social-links {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       gap: 15px;
-      margin-top: 50px;
       flex-wrap: wrap;
     }
 
@@ -158,72 +164,74 @@
 </head>
 <body>
 
-  <!-- Контейнер для ссылок -->
-  <div class="social-container">
-    <div class="social-links">
-      <!-- Твитч -->
-      <a href="https://www.twitch.tv/sasha__savage" class="social-link twitch" target="_blank">
-        <i class="fab fa-twitch"></i>
-        Twitch
-      </a>
+  <div class="container">
+    <!-- Контейнер для ссылок -->
+    <div class="social-container">
+      <div class="social-links">
+        <!-- Твитч -->
+        <a href="https://www.twitch.tv/sasha__savage" class="social-link twitch" target="_blank">
+          <i class="fab fa-twitch"></i>
+          Twitch
+        </a>
 
-      <!-- ТикТок -->
-      <a href="https://www.tiktok.com/@sasha__savage" class="social-link tiktok" target="_blank">
-        <i class="fab fa-tiktok"></i>
-        TikTok
-      </a>
+        <!-- ТикТок -->
+        <a href="https://www.tiktok.com/@sasha__savage" class="social-link tiktok" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          TikTok
+        </a>
 
-      <!-- Телеграм -->
-      <a href="https://t.me/alx_savage" class="social-link telegram" target="_blank">
-        <i class="fab fa-telegram-plane"></i>
-        Telegram
-      </a>
+        <!-- Телеграм -->
+        <a href="https://t.me/alx_savage" class="social-link telegram" target="_blank">
+          <i class="fab fa-telegram-plane"></i>
+          Telegram
+        </a>
 
-      <!-- Donation Alerts -->
-      <a href="https://www.donationalerts.com/r/sasha__savage" class="social-link donation-alerts" target="_blank">
-        <i class="fas fa-hand-holding-usd"></i>
-        Донат
-      </a>
+        <!-- Donation Alerts -->
+        <a href="https://www.donationalerts.com/r/sasha__savage" class="social-link donation-alerts" target="_blank">
+          <i class="fas fa-hand-holding-usd"></i>
+          Донат
+        </a>
 
-      <!-- Mem Alerts -->
-      <a href="https://memealerts.com/sasha__savage" class="social-link mem-alerts" target="_blank">
-        <i class="fas fa-images"></i>
-        Мемы
-      </a>
-    </div>
-  </div>
-
-  <!-- Контейнер для информации об оборудовании -->
-  <div class="specs-container">
-    <!-- Блок с ПК -->
-    <div class="block">
-      <h3>Оборудование ПК</h3>
-      <ul>
-        <li>Видеокарта: Palit RTX 5080 GamingPro 16GB</li>
-        <li>Процессор: Ryzen 9 9950 X3D</li>
-        <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
-        <li>Оперативная память: Adata XPG Lancer Blade RGB 32GB 6400</li>
-        <li>ССД: Adata Legend 960 Max 2TB</li>
-        <li>Блок питания: DeepCool GameStorm PN1200M</li>
-        <li>Корпус: DeepCool CC560 V2</li>
-        <li>Башенный кулер: DeepCool Assasin IV</li>
-        <li>Доп. вентиляторы: Arctic P14 PWM PST Value Pack (5x140мм)</li>
-      </ul>
+        <!-- Mem Alerts -->
+        <a href="https://memealerts.com/sasha__savage" class="social-link mem-alerts" target="_blank">
+          <i class="fas fa-images"></i>
+          Мемы
+        </a>
+      </div>
     </div>
 
-    <!-- Блок с периферией -->
-    <div class="block">
-      <h3>Периферия</h3>
-      <ul>
-        <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
-        <li>Монитор 2: 27" MSI PRO MP271</li>
-        <li>Мышь: Lunacy One White</li>
-        <li>Клавиатура: Lunacy In Space 98</li>
-        <li>Коврик: Lunacy Outlines XL</li>
-        <li>Наушники: Logitech G733 LightSpeed</li>
-        <li>Микрофон: Fifine AmpliGame A9</li>
-        <li>Веб-камера: ZET GAMING Cyclop 2 M100R2</li>
-      </ul>
+    <!-- Контейнер для информации об оборудовании -->
+    <div class="specs-container">
+      <!-- Блок с ПК -->
+      <div class="block">
+        <h3>Оборудование ПК</h3>
+        <ul>
+          <li>Видеокарта: Palit RTX 5080 GamingPro 16GB</li>
+          <li>Процессор: Ryzen 9 9950 X3D</li>
+          <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
+          <li>Оперативная память: Adata XPG Lancer Blade RGB 32GB 6400</li>
+          <li>ССД: Adata Legend 960 Max 2TB</li>
+          <li>Блок питания: DeepCool GameStorm PN1200M</li>
+          <li>Корпус: DeepCool CC560 V2</li>
+          <li>Башенный кулер: DeepCool Assasin IV</li>
+          <li>Доп. вентиляторы: Arctic P14 PWM PST Value Pack (5x140мм)</li>
+        </ul>
+      </div>
+
+      <!-- Блок с периферией -->
+      <div class="block">
+        <h3>Периферия</h3>
+        <ul>
+          <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
+          <li>Монитор 2: 27" MSI PRO MP271</li>
+          <li>Мышь: Lunacy One White</li>
+          <li>Клавиатура: Lunacy In Space 98</li>
+          <li>Коврик: Lunacy Outlines XL</li>
+          <li>Наушники: Logitech G733 LightSpeed</li>
+          <li>Микрофон: Fifine AmpliGame A9</li>
+          <li>Веб-камера: ZET GAMING Cyclop 2 M100R2</li>
+        </ul>
+      </div>
     </div>
   </div>
 
