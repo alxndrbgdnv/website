@@ -11,13 +11,13 @@
     /* Плавная анимация фона */
     @keyframes gradientMotion {
       0% {
-        background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
+        background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
       }
       50% {
-        background: linear-gradient(45deg, #f5f5f5, #b4c6e6, #f5f5f5);
+        background: linear-gradient(45deg, #6441a5, #9146ff, #6441a5);
       }
       100% {
-        background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
+        background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
       }
     }
 
@@ -25,33 +25,33 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
+      background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
       background-size: 400% 400%;
       animation: gradientMotion 15s ease infinite;
-      color: #333333;
+      color: #ffffff;
     }
 
     /* Header */
     header {
-      padding: 30px;
+      padding: 40px;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-bottom: 2px solid #cccccc;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 2px solid #9146ff;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.8em;
-      color: #333333;
+      font-size: 3em;
+      color: #ffffff;
       font-weight: bold;
     }
 
     header p {
       margin-top: 10px;
       font-size: 1.1em;
-      color: #777777;
+      color: #d3d3d3;
     }
 
     /* Ссылки на соц. сети */
@@ -63,18 +63,19 @@
     .button {
       display: inline-block;
       padding: 12px 25px;
-      margin: 10px 0; /* Расстояние между кнопками */
-      background-color: #5c80d1;
+      margin: 10px 0;
+      background-color: #9146ff;
       color: #ffffff;
       border-radius: 5px;
       text-decoration: none;
       font-size: 1em;
       transition: background-color 0.3s ease, transform 0.3s ease;
-      width: 200px; /* Устанавливаем одинаковую ширину для всех кнопок */
+      width: 200px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .button:hover {
-      background-color: #4a6fbb;
+      background-color: #6441a5;
       transform: scale(1.05);
     }
 
@@ -98,11 +99,11 @@
     }
 
     .block {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 30px;
       border-radius: 8px;
       width: 48%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
       animation: fadeInUp 0.8s ease forwards;
       opacity: 0;
     }
@@ -111,14 +112,14 @@
       margin-top: 0;
       font-size: 1.5em;
       margin-bottom: 20px;
-      color: #333333;
+      color: #ffffff;
     }
 
     .block ul {
       padding-left: 0;
       list-style: none;
       margin: 0;
-      color: #555555;
+      color: #d3d3d3;
     }
 
     .block ul li {
@@ -140,8 +141,8 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(245, 245, 245, 0.9);
-      color: #777;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #d3d3d3;
       font-size: 0.9em;
     }
 
@@ -150,7 +151,7 @@
 <body>
   <header>
     <h1>Sasha__Savage</h1>
-    <p>Стримлю на Twitch. Делюсь опытом с моей техникой.</p>
+    <p>Стримлю на Twitch. Обычный работяга, стремящийся подняться вверх.</p>
 
     <div class="button-container">
       <div class="button-group">
