@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Стримерская страница Sasha__Savage.">
-  <meta name="author" content="Sasha__Savage">
-  <title>Стримерская страница Sasha__Savage</title>
-  <link rel="icon" href="favicon.ico">
+  <title>Sasha__Savage</title>
   <style>
-    /* Плавная анимация фона */
     @keyframes gradientMotion {
       0% {
         background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
@@ -22,166 +18,129 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
       background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
       background-size: 400% 400%;
       animation: gradientMotion 15s ease infinite;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: #fff;
     }
 
-    /* Header */
     header {
-      padding: 40px;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.7);
       border-bottom: 2px solid #9146ff;
-      width: 100%;
-      max-width: 1200px;
     }
 
     header h1 {
       margin: 0;
       font-size: 3em;
-      color: #ffffff;
-      font-weight: bold;
     }
 
     header p {
-      margin-top: 10px;
-      font-size: 1.1em;
-      color: #d3d3d3;
+      margin: 10px 0 0;
+      color: #ccc;
     }
 
-    /* Ссылки на соц. сети */
     .button-container {
       margin-top: 20px;
-      text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 10px 0;
-      background-color: #9146ff;
-      color: #ffffff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1em;
-      transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-      width: 200px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .button:hover {
-      background-color: #6441a5;
-      transform: scale(1.05);
-      color: #9146ff; /* Цвет текста при наведении */
     }
 
     .button-group {
-      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
-    .button-group a {
-      display: block;
+    .button {
+      padding: 12px 24px;
+      background-color: #9146ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: 0.3s;
     }
 
-    /* Блоки характеристик ПК и периферии */
+    .button:hover {
+      background-color: white;
+      color: #9146ff;
+    }
+
     .specs-container {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 40px auto;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 40px 20px;
       flex-wrap: wrap;
-      padding: 0 20px;
+      max-width: 1400px;
+      margin: auto;
     }
 
     .block {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 25px;
       border-radius: 8px;
-      width: 48%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
       animation: fadeInUp 0.8s ease forwards;
       opacity: 0;
-      max-width: 500px;
     }
 
     .block h3 {
       margin-top: 0;
       font-size: 1.5em;
-      margin-bottom: 20px;
-      color: #ffffff;
+      border-bottom: 1px solid #9146ff;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .block ul {
-      padding-left: 0;
       list-style: none;
+      padding: 0;
       margin: 0;
-      color: #d3d3d3;
     }
 
-    .block ul li {
-      margin-bottom: 10px;
-    }
-
-    /* Анимация появления */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .block li {
+      margin-bottom: 8px;
+      color: #ccc;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #d3d3d3;
-      font-size: 0.9em;
-      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: #aaa;
     }
 
-    /* Адаптивность на мобильных устройствах */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 1024px) {
+      .block {
+        width: 45%;
+      }
+    }
+
     @media (max-width: 768px) {
       .specs-container {
         flex-direction: column;
         align-items: center;
       }
-
-      .block {
-        width: 90%;
-        margin-bottom: 20px;
-      }
     }
-
-    /* Для экранов с разрешением 1200px и выше (для 2K мониторов и больше) */
-    @media (min-width: 1200px) {
-      .specs-container {
-        flex-direction: row;
-      }
-
-      .block {
-        width: 48%;
-      }
-    }
-
   </style>
 </head>
 <body>
   <header>
     <h1>Sasha__Savage</h1>
-    <p>Стримлю на Twitch. Делюсь опытом с моей техникой.</p>
+    <p>Стример на Twitch</p>
 
     <div class="button-container">
       <div class="button-group">
@@ -202,14 +161,15 @@
         <li>Видеокарта: Palit RTX 5080 GamingPro 16gb</li>
         <li>Процессор: Ryzen 9 9950 X3D</li>
         <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
-        <li>Оперативная память: Adata XPG Lancer Blade RGB 32gb 6400</li>
-        <li>ССД: Adata Legend 960 Max 2tb</li>
-        <li>Блок питания: DeepCool GameStorm PN1200M</li>
+        <li>ОЗУ: Adata XPG Lancer Blade RGB 32gb 6400</li>
+        <li>SSD: Adata Legend 960 Max 2tb</li>
+        <li>БП: DeepCool GameStorm PN1200M</li>
         <li>Корпус: DeepCool CC560 V2</li>
-        <li>Башенный кулер: DeepCool Assasin IV</li>
-        <li>Доп. Вентиляторы: Arctic P14 PWM PST Value Pack (5x140мм)</li>
+        <li>Кулер: DeepCool Assasin IV</li>
+        <li>Вентиляторы: Arctic P14 PWM PST (5x140мм)</li>
       </ul>
     </div>
+
     <div class="block">
       <h3>Периферия</h3>
       <ul>
@@ -226,7 +186,7 @@
   </div>
 
   <footer>
-    <p>© 2025 Sasha__Savage. Все права защищены.</p>
+    <p>© 2025 Sasha__Savage</p>
   </footer>
 </body>
 </html>
