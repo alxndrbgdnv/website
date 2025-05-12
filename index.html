@@ -1,138 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sasha__Savage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasha__Savage | Twitch стример</title>
   <style>
     @keyframes gradientMotion {
       0% {
-        background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
+        background-position: 0% 50%;
       }
       50% {
-        background: linear-gradient(45deg, #6441a5, #9146ff, #6441a5);
+        background-position: 100% 50%;
       }
       100% {
-        background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
+        background-position: 0% 50%;
       }
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: linear-gradient(45deg, #9146ff, #6441a5, #9146ff);
-      background-size: 400% 400%;
-      animation: gradientMotion 15s ease infinite;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(270deg, #0e0e10, #1f1f23, #0e0e10);
+      background-size: 600% 600%;
+      animation: gradientMotion 20s ease infinite;
+      color: #ffffff;
     }
 
     header {
+      padding: 40px 20px 20px;
       text-align: center;
-      padding: 40px 20px;
-      background: rgba(0, 0, 0, 0.7);
-      border-bottom: 2px solid #9146ff;
     }
 
     header h1 {
+      font-size: 2.8em;
       margin: 0;
-      font-size: 3em;
     }
 
-    header p {
-      margin: 10px 0 0;
-      color: #ccc;
-    }
-
-    .button-container {
-      margin-top: 20px;
-    }
-
-    .button-group {
+    .links {
+      margin-top: 25px;
       display: flex;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      gap: 15px;
     }
 
     .button {
-      padding: 12px 24px;
-      background-color: #9146ff;
+      background-color: transparent;
+      border: 2px solid #9147ff;
       color: white;
-      text-decoration: none;
+      padding: 12px 24px;
       border-radius: 6px;
-      font-weight: 500;
-      transition: 0.3s;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .button:hover {
-      background-color: white;
-      color: #9146ff;
+      background-color: #9147ff;
+      color: white;
     }
 
-    .specs-container {
+    .support {
+      margin-top: 20px;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 30px;
-      padding: 40px 20px;
       flex-wrap: wrap;
-      max-width: 1400px;
-      margin: auto;
+      gap: 15px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      padding: 0 20px;
     }
 
     .block {
-      background: rgba(0, 0, 0, 0.6);
+      background-color: #1f1f23;
+      border-radius: 10px;
       padding: 25px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      animation: fadeInUp 0.8s ease forwards;
-      opacity: 0;
+      width: 40%;
+      min-height: 400px;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
     }
 
-    .block h3 {
+    .block:hover {
+      box-shadow: 0 0 20px #9147ff33;
+    }
+
+    .block h2 {
       margin-top: 0;
       font-size: 1.5em;
-      border-bottom: 1px solid #9146ff;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
+      color: white;
     }
 
-    .block ul {
+    ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
       margin: 0;
     }
 
-    .block li {
-      margin-bottom: 8px;
-      color: #ccc;
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1em;
+      color: #cccccc;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #aaa;
+      font-size: 0.9em;
+      color: #888888;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (min-width: 1024px) {
+    @media (max-width: 900px) {
       .block {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .specs-container {
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        min-height: auto;
       }
     }
   </style>
@@ -140,29 +127,27 @@
 <body>
   <header>
     <h1>Sasha__Savage</h1>
-    <p>Стример на Twitch</p>
 
-    <div class="button-container">
-      <div class="button-group">
-        <a href="https://www.twitch.tv/sasha__savage" class="button">Twitch</a>
-        <a href="https://t.me/alx_savage" class="button">Telegram</a>
-      </div>
-      <div class="button-group">
-        <a href="https://www.donationalerts.com/r/sasha__savage" class="button">Поддержать донатом</a>
-        <a href="https://memealerts.com/sasha__savage" class="button">Отправить мем</a>
-      </div>
+    <div class="links">
+      <a class="button" href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
+      <a class="button" href="https://t.me/alx_savage" target="_blank">Telegram</a>
+    </div>
+
+    <div class="support">
+      <a class="button" href="https://www.donationalerts.com/r/sasha__savage" target="_blank">Поддержать донатом</a>
+      <a class="button" href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a>
     </div>
   </header>
 
-  <div class="specs-container">
+  <div class="content">
     <div class="block">
-      <h3>Характеристики ПК</h3>
+      <h2>Характеристики ПК</h2>
       <ul>
-        <li>Видеокарта: Palit RTX 5080 GamingPro 16gb</li>
+        <li>Видеокарта: Palit RTX 5080 GamingPro 16GB</li>
         <li>Процессор: Ryzen 9 9950 X3D</li>
         <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
-        <li>ОЗУ: Adata XPG Lancer Blade RGB 32gb 6400</li>
-        <li>SSD: Adata Legend 960 Max 2tb</li>
+        <li>ОЗУ: Adata XPG Lancer Blade RGB 32GB 6400MHz</li>
+        <li>SSD: Adata Legend 960 Max 2TB</li>
         <li>БП: DeepCool GameStorm PN1200M</li>
         <li>Корпус: DeepCool CC560 V2</li>
         <li>Кулер: DeepCool Assasin IV</li>
@@ -171,7 +156,7 @@
     </div>
 
     <div class="block">
-      <h3>Периферия</h3>
+      <h2>Периферия</h2>
       <ul>
         <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
         <li>Монитор 2: 27" MSI PRO MP271</li>
@@ -180,13 +165,13 @@
         <li>Коврик: Lunacy Outlines XL</li>
         <li>Наушники: Logitech G733 LightSpeed</li>
         <li>Микрофон: Fifine AmpliGame A9</li>
-        <li>Вебка: ZET GAMING Cyclop 2 M100R2</li>
+        <li>Веб-камера: ZET GAMING Cyclop 2 M100R2</li>
       </ul>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Sasha__Savage</p>
+    &copy; 2025 Sasha__Savage. Все права защищены.
   </footer>
 </body>
 </html>
