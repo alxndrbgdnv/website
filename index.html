@@ -6,24 +6,32 @@
     <title>Sasha__Savage - Стример</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #141414;
+            background: linear-gradient(45deg, #2e2e2e, #141414);
             color: white;
         }
         header {
-            background-color: #1c1c1c;
-            padding: 20px;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            padding: 50px;
             text-align: center;
+            color: white;
+            font-size: 2.5em;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
         }
         .content {
-            padding: 20px;
+            padding: 40px;
             text-align: center;
+            background: rgba(0, 0, 0, 0.6);
         }
         .links a {
             color: #00c8ff;
@@ -34,36 +42,42 @@
         .links a:hover {
             text-decoration: underline;
         }
-        footer {
-            background-color: #1c1c1c;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        button {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            margin-top: 20px;
             font-size: 1.2em;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .donate-button {
-            background-color: #00c8ff;
             color: white;
-        }
-        .meme-button {
             background-color: #ff67ab;
-            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #ff3399;
+        }
+        iframe {
+            width: 100%;
+            max-width: 720px;
+            height: 400px;
+            margin-top: 20px;
+        }
+        footer {
+            background: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Sasha__Savage</h1>
-        <p>Начинающий стример на Twitch</p>
+        <p>Присоединяйтесь ко мне на Twitch!</p>
     </header>
-    
+
     <div class="content">
         <h2>Где меня найти</h2>
         <div class="links">
@@ -72,26 +86,21 @@
         </div>
         
         <h2>Обо мне</h2>
-        <p>Привет! Я начинающий стример, рад приветствовать вас на моем канале. Присоединяйтесь, чтобы насладиться увлекательными играми и общением!</p>
-        
-        <h2>Расписание стримов</h2>
-        <p>Скоро будет добавлено!</p>
+        <p>Я начинающий стример, готов делиться весёлыми моментами и общением с вами. Присоединяйтесь к моей трансляции и не пропустите ни одного стрима!</p>
 
-        <!-- Кнопка для донатов через DonationAlerts -->
+        <h2>Смотри мой стрим</h2>
+        <iframe src="https://player.twitch.tv/?channel=sasha__savage&autoplay=true" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
+
         <h2>Поддержка</h2>
-        <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank">
-            <button class="donate-button">Поддержи меня через DonationAlerts</button>
-        </a>
+        <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank" class="button">Поддержи меня через DonationAlerts</a>
 
-        <!-- Кнопка для отправки мемов через MemeAlerts -->
-        <h2>Отправка мемов на стрим</h2>
-        <a href="https://memealerts.com/sasha__savage" target="_blank">
-            <button class="meme-button">Отправить мем на стрим</button>
-        </a>
+        <h2>Отправь мем на стрим</h2>
+        <a href="https://memealerts.com/sasha__savage" target="_blank" class="button">Отправить мем</a>
     </div>
 
     <footer>
-        <!-- Убрали лишнюю надпись -->
+        <p>© 2025 Sasha__Savage. Все права защищены.</p>
     </footer>
+
 </body>
 </html>
