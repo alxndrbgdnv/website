@@ -2,124 +2,115 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sasha__Savage | Twitch стример</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sasha__Savage — Twitch Стример</title>
   <style>
+    /* Анимация градиента */
     @keyframes gradientMotion {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(270deg, #0e0e10, #1f1f23, #0e0e10);
+      background: linear-gradient(270deg, #1f1f23, #2b2b35, #1f1f23);
       background-size: 600% 600%;
-      animation: gradientMotion 20s ease infinite;
-      color: #ffffff;
+      animation: gradientMotion 30s ease infinite;
+      color: white;
     }
 
     header {
-      padding: 40px 20px 20px;
       text-align: center;
+      padding: 40px 20px 20px;
     }
 
     header h1 {
-      font-size: 2.8em;
       margin: 0;
+      font-size: 2.5em;
     }
 
-    .links {
-      margin-top: 25px;
+    .social-links, .donation-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
+      margin-top: 15px;
+      gap: 20px;
     }
 
-    .button {
-      background-color: transparent;
-      border: 2px solid #9147ff;
+    .social-links a, .donation-links a {
       color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
       text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    .button:hover {
-      background-color: #9147ff;
-      color: white;
+    .social-links a:hover, .donation-links a:hover {
+      color: #9147ff; /* Twitch-пурпурный */
     }
 
-    .support {
-      margin-top: 20px;
+    .specs-wrapper {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .content {
-      display: flex;
-      justify-content: center;
       gap: 40px;
-      margin: 60px auto;
-      flex-wrap: wrap;
+      margin: 50px auto;
       max-width: 1200px;
       padding: 0 20px;
     }
 
     .block {
-      background-color: #1f1f23;
-      border-radius: 10px;
-      padding: 25px;
-      width: 40%;
+      background-color: #2c2c31;
+      border: 2px solid #9147ff;
+      border-radius: 12px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
       min-height: 400px;
       box-sizing: border-box;
-      transition: box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
     }
 
-    .block:hover {
-      box-shadow: 0 0 20px #9147ff33;
-    }
-
-    .block h2 {
+    .block h3 {
       margin-top: 0;
-      font-size: 1.5em;
-      color: white;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      color: #ffffff;
     }
 
     ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
+      padding-left: 20px;
     }
 
     ul li {
-      margin-bottom: 10px;
+      margin: 10px 0;
       font-size: 1em;
-      color: #cccccc;
+      color: #d1d1d1;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #888888;
+      color: #777;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
+      .specs-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .block {
         width: 100%;
-        min-height: auto;
+        max-width: 90%;
       }
     }
   </style>
@@ -127,21 +118,20 @@
 <body>
   <header>
     <h1>Sasha__Savage</h1>
-
-    <div class="links">
-      <a class="button" href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
-      <a class="button" href="https://t.me/alx_savage" target="_blank">Telegram</a>
+    <div class="social-links">
+      <a href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
+      <a href="https://t.me/alx_savage" target="_blank">Telegram</a>
+      <a href="https://www.tiktok.com/@sasha__savage" target="_blank">TikTok</a>
     </div>
-
-    <div class="support">
-      <a class="button" href="https://www.donationalerts.com/r/sasha__savage" target="_blank">Поддержать донатом</a>
-      <a class="button" href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a>
+    <div class="donation-links" style="margin-top: 10px;">
+      <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank">Поддержать донатом</a>
+      <a href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a>
     </div>
   </header>
 
-  <div class="content">
+  <div class="specs-wrapper">
     <div class="block">
-      <h2>Характеристики ПК</h2>
+      <h3>Характеристики ПК</h3>
       <ul>
         <li>Видеокарта: Palit RTX 5080 GamingPro 16GB</li>
         <li>Процессор: Ryzen 9 9950 X3D</li>
@@ -150,13 +140,13 @@
         <li>SSD: Adata Legend 960 Max 2TB</li>
         <li>БП: DeepCool GameStorm PN1200M</li>
         <li>Корпус: DeepCool CC560 V2</li>
-        <li>Кулер: DeepCool Assasin IV</li>
-        <li>Вентиляторы: Arctic P14 PWM PST (5x140мм)</li>
+        <li>Кулер: DeepCool Assassin IV</li>
+        <li>Доп. вентиляторы: Arctic P14 PWM PST (5×140мм)</li>
       </ul>
     </div>
 
     <div class="block">
-      <h2>Периферия</h2>
+      <h3>Периферия</h3>
       <ul>
         <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
         <li>Монитор 2: 27" MSI PRO MP271</li>
@@ -165,13 +155,13 @@
         <li>Коврик: Lunacy Outlines XL</li>
         <li>Наушники: Logitech G733 LightSpeed</li>
         <li>Микрофон: Fifine AmpliGame A9</li>
-        <li>Веб-камера: ZET GAMING Cyclop 2 M100R2</li>
+        <li>Вебка: ZET GAMING Cyclop 2 M100R2</li>
       </ul>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 Sasha__Savage. Все права защищены.
+    © 2025 Sasha__Savage. Все права защищены.
   </footer>
 </body>
 </html>
