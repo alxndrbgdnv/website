@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Социальные Сети</title>
+  <title>Социальные Сети и Оборудование</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f0f0;
       margin: 0;
       padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+
+    .social-container {
+      margin-top: 20px;
+    }
+
+    .social-container h2 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
 
     .social-links {
@@ -126,22 +142,38 @@
       height: 40px;
     }
 
-    /* Для заголовков */
-    h1 {
-      text-align: center;
+    /* Оборудование */
+    .specs-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
       margin-top: 50px;
-      font-size: 2.5em;
+      flex-wrap: wrap;
+      padding: 20px;
     }
 
-    /* Контейнер для ссылок */
-    .social-container {
-      margin-top: 20px;
-    }
-
-    .social-container h2 {
+    .block {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 20px;
+    }
+
+    .block h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .block ul li {
+      font-size: 1.1em;
+      margin: 10px 0;
     }
 
   </style>
@@ -149,11 +181,11 @@
 <body>
 
   <!-- Заголовок -->
-  <h1>Мои Социальные Сети</h1>
+  <h1>Мои Социальные Сети и Оборудование</h1>
 
   <!-- Контейнер для ссылок -->
   <div class="social-container">
-    <h2>Ссылки на все</h2>
+    <h2>Ссылки на всё</h2>
     <div class="social-links">
       <!-- Твитч -->
       <a href="https://www.twitch.tv/sasha__savage" class="social-link twitch" target="_blank">
@@ -184,6 +216,40 @@
         <img src="https://memealerts.com/favicon.ico" alt="Mem Alerts Logo" class="icon">
         Мемы
       </a>
+    </div>
+  </div>
+
+  <!-- Контейнер для информации об оборудовании -->
+  <div class="specs-container">
+    <!-- Блок с ПК -->
+    <div class="block">
+      <h3>Оборудование ПК</h3>
+      <ul>
+        <li>Видеокарта: Palit RTX 5080 GamingPro 16GB</li>
+        <li>Процессор: Ryzen 9 9950 X3D</li>
+        <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
+        <li>Оперативная память: Adata XPG Lancer Blade RGB 32GB 6400</li>
+        <li>ССД: Adata Legend 960 Max 2TB</li>
+        <li>Блок питания: DeepCool GameStorm PN1200M</li>
+        <li>Корпус: DeepCool CC560 V2</li>
+        <li>Башенный кулер: DeepCool Assasin IV</li>
+        <li>Доп. вентиляторы: Arctic P14 PWM PST Value Pack (5x140мм)</li>
+      </ul>
+    </div>
+
+    <!-- Блок с периферией -->
+    <div class="block">
+      <h3>Периферия</h3>
+      <ul>
+        <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
+        <li>Монитор 2: 27" MSI PRO MP271</li>
+        <li>Мышь: Lunacy One White</li>
+        <li>Клавиатура: Lunacy In Space 98</li>
+        <li>Коврик: Lunacy Outlines XL</li>
+        <li>Наушники: Logitech G733 LightSpeed</li>
+        <li>Микрофон: Fifine AmpliGame A9</li>
+        <li>Веб-камера: ZET GAMING Cyclop 2 M100R2</li>
+      </ul>
     </div>
   </div>
 
