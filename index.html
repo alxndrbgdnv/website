@@ -11,6 +11,7 @@
             padding: 0;
             background: linear-gradient(45deg, #2e2e2e, #141414);
             color: white;
+            transition: background 0.3s ease;
         }
         header {
             background: url('your-background-image.jpg') no-repeat center center/cover;
@@ -18,6 +19,7 @@
             text-align: center;
             color: white;
             font-size: 2.5em;
+            transition: padding 0.3s ease;
         }
         header h1 {
             margin: 0;
@@ -32,15 +34,18 @@
             padding: 40px;
             text-align: center;
             background: rgba(0, 0, 0, 0.6);
+            transition: padding 0.3s ease;
         }
         .links a {
             color: #00c8ff;
             text-decoration: none;
             margin: 10px;
             font-size: 1.2em;
+            transition: color 0.3s ease;
         }
         .links a:hover {
             text-decoration: underline;
+            color: #ff67ab;
         }
         .button {
             display: inline-block;
@@ -51,10 +56,57 @@
             background-color: #ff67ab;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .button:hover {
             background-color: #ff3399;
+            transform: scale(1.05);
+        }
+        .achievements {
+            background-color: #1c1c1c;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .achievements h3 {
+            font-size: 1.8em;
+        }
+        .achievements ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .achievements ul li {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+        .pc-specs {
+            background-color: #1c1c1c;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .pc-specs h3 {
+            font-size: 1.8em;
+        }
+        .pc-specs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .pc-specs ul li {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+        .social-icons {
+            margin-top: 30px;
+        }
+        .social-icons a {
+            margin: 10px;
+            font-size: 1.5em;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00c8ff;
         }
         footer {
             background: #1c1c1c;
@@ -82,12 +134,54 @@
         <h2>Обо мне</h2>
         <p>Я начинающий стример, готов делиться весёлыми моментами и общением с вами. Присоединяйтесь к моей трансляции и не пропустите ни одного стрима!</p>
 
-        <!-- Убрали плеер, оставляем просто информацию -->
+        <div class="achievements">
+            <h3>Мои достижения</h3>
+            <ul>
+                <li>Подписчики на Twitch: 1000+</li>
+                <li>Лучший стрим недели по просмотрам!</li>
+                <li>Много смеха и интересных моментов!</li>
+            </ul>
+        </div>
+
         <h2>Поддержка</h2>
         <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank" class="button">Поддержи меня через DonationAlerts</a>
 
         <h2>Отправь мем на стрим</h2>
         <a href="https://memealerts.com/sasha__savage" target="_blank" class="button">Отправить мем</a>
+
+        <!-- Секция характеристик ПК и периферии -->
+        <div class="pc-specs">
+            <h3>Характеристики ПК</h3>
+            <ul>
+                <li><strong>Видеокарта:</strong> Palit RTX 5080 GamingPro 16GB</li>
+                <li><strong>Процессор:</strong> Ryzen 9 9950 X3D</li>
+                <li><strong>Материнская плата:</strong> MSI MAG X870 Tomahawk WiFi</li>
+                <li><strong>Оперативная память:</strong> Adata XPG Lancer Blade RGB 32GB 6400</li>
+                <li><strong>ССД:</strong> Adata Legend 960 Max 2TB</li>
+                <li><strong>Блок питания:</strong> DeepCool GameStorm PN1200M</li>
+                <li><strong>Корпус:</strong> DeepCool CC560 V2</li>
+                <li><strong>Башенный кулер:</strong> DeepCool Assasin IV</li>
+                <li><strong>Доп. вентиляторы:</strong> Arctic P14 PWM PST Value Pack (5x140мм)</li>
+            </ul>
+
+            <h3>Периферия</h3>
+            <ul>
+                <li><strong>Монитор 1:</strong> 27" Acer Nitro XV272UF3bmiiprx</li>
+                <li><strong>Монитор 2:</strong> 27" MSI PRO MP271</li>
+                <li><strong>Мышь:</strong> Lunacy One White</li>
+                <li><strong>Клавиатура:</strong> Lunacy In Space 98</li>
+                <li><strong>Коврик:</strong> Lunacy Outlines XL</li>
+                <li><strong>Наушники:</strong> Logitech G733 LightSpeed</li>
+                <li><strong>Микрофон:</strong> Fifine AmpliGame A9</li>
+                <li><strong>Веб-камера:</strong> ZET GAMING Cyclop 2 M100R2</li>
+            </ul>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://twitter.com/sasha__savage" target="_blank">Twitter</a>
+            <a href="https://instagram.com/sasha__savage" target="_blank">Instagram</a>
+            <a href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
+        </div>
     </div>
 
     <footer>
