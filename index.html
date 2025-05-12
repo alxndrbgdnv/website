@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sasha__Savage — Twitch Стример</title>
   <style>
-    /* Анимация градиента */
     @keyframes gradientMotion {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -31,26 +30,7 @@
       font-size: 2.5em;
     }
 
-    .social-links, .donation-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 15px;
-      gap: 20px;
-    }
-
-    .social-links a, .donation-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover, .donation-links a:hover {
-      color: #9147ff; /* Twitch-пурпурный */
-    }
-
-    .specs-wrapper {
+    .blocks-wrapper {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -78,6 +58,7 @@
       font-size: 1.4em;
       margin-bottom: 15px;
       color: #ffffff;
+      text-align: center;
     }
 
     ul {
@@ -88,6 +69,29 @@
       margin: 10px 0;
       font-size: 1em;
       color: #d1d1d1;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .link-list li {
+      margin: 12px 0;
+    }
+
+    .link-list a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    .link-list a:hover {
+      color: #9147ff;
     }
 
     @keyframes fadeInUp {
@@ -103,7 +107,7 @@
     }
 
     @media (max-width: 768px) {
-      .specs-wrapper {
+      .blocks-wrapper {
         flex-direction: column;
         align-items: center;
       }
@@ -111,6 +115,7 @@
       .block {
         width: 100%;
         max-width: 90%;
+        min-height: unset;
       }
     }
   </style>
@@ -118,18 +123,28 @@
 <body>
   <header>
     <h1>Sasha__Savage</h1>
-    <div class="social-links">
-      <a href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
-      <a href="https://t.me/alx_savage" target="_blank">Telegram</a>
-      <a href="https://www.tiktok.com/@sasha__savage" target="_blank">TikTok</a>
-    </div>
-    <div class="donation-links" style="margin-top: 10px;">
-      <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank">Поддержать донатом</a>
-      <a href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a>
-    </div>
   </header>
 
-  <div class="specs-wrapper">
+  <div class="blocks-wrapper">
+    <div class="block">
+      <h3>Социальные сети</h3>
+      <ul class="link-list">
+        <li><a href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a></li>
+        <li><a href="https://t.me/alx_savage" target="_blank">Telegram</a></li>
+        <li><a href="https://www.tiktok.com/@sasha__savage" target="_blank">TikTok</a></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Поддержать стрим</h3>
+      <ul class="link-list">
+        <li><a href="https://www.donationalerts.com/r/sasha__savage" target="_blank">Поддержать донатом</a></li>
+        <li><a href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="blocks-wrapper">
     <div class="block">
       <h3>Характеристики ПК</h3>
       <ul>
