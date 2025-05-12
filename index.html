@@ -8,15 +8,16 @@
   <title>Стримерская страница Sasha__Savage</title>
   <link rel="icon" href="favicon.ico">
   <style>
+    /* Плавная анимация фона */
     @keyframes gradientMotion {
       0% {
-        background: linear-gradient(45deg, #a8b2d1, #f0f4f8, #d0d6e0);
+        background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
       }
       50% {
-        background: linear-gradient(45deg, #f0f4f8, #d0d6e0, #a8b2d1);
+        background: linear-gradient(45deg, #f5f5f5, #b4c6e6, #f5f5f5);
       }
       100% {
-        background: linear-gradient(45deg, #a8b2d1, #f0f4f8, #d0d6e0);
+        background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
       }
     }
 
@@ -24,16 +25,17 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(45deg, #a8b2d1, #f0f4f8, #d0d6e0);
+      background: linear-gradient(45deg, #b4c6e6, #f5f5f5, #b4c6e6);
       background-size: 400% 400%;
       animation: gradientMotion 15s ease infinite;
       color: #333333;
     }
 
+    /* Header */
     header {
-      padding: 20px;
+      padding: 30px;
       text-align: center;
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.9);
       border-bottom: 2px solid #cccccc;
       max-width: 1200px;
       margin: 0 auto;
@@ -43,6 +45,7 @@
       margin: 0;
       font-size: 2.8em;
       color: #333333;
+      font-weight: bold;
     }
 
     header p {
@@ -51,6 +54,7 @@
       color: #777777;
     }
 
+    /* Ссылки на соц. сети */
     .button-container {
       margin-top: 20px;
       text-align: center;
@@ -58,9 +62,9 @@
 
     .button {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 12px 25px;
       margin: 10px;
-      background-color: #4a90e2;
+      background-color: #5c80d1;
       color: #ffffff;
       border-radius: 5px;
       text-decoration: none;
@@ -69,20 +73,22 @@
     }
 
     .button:hover {
-      background-color: #357ab7;
+      background-color: #4a6fbb;
       transform: scale(1.05);
     }
 
+    /* Блоки характеристик ПК и периферии */
     .specs-container {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       max-width: 1200px;
       margin: 40px auto;
+      flex-wrap: wrap;
     }
 
     .block {
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 30px;
       border-radius: 8px;
       width: 48%;
@@ -96,6 +102,7 @@
       font-size: 1.5em;
       margin-bottom: 15px;
       color: #333333;
+      font-weight: bold;
     }
 
     ul {
@@ -111,6 +118,7 @@
       color: #555555;
     }
 
+    /* Анимация появления */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -122,10 +130,11 @@
       }
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #f0f4f8;
+      background-color: rgba(240, 240, 240, 0.9);
       color: #777;
       font-size: 0.9em;
       max-width: 1200px;
@@ -133,13 +142,13 @@
     }
 
     footer a {
-      color: #4a90e2;
+      color: #5c80d1;
       text-decoration: none;
       margin: 0 10px;
     }
 
     footer a:hover {
-      color: #357ab7;
+      color: #4a6fbb;
     }
   </style>
 </head>
