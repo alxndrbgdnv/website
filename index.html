@@ -3,246 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Стримера Страница</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sasha__Savage - Стример</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Общие стили */
+        /* Основные стили */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: #1f1f1f;
+            background: linear-gradient(45deg, #6a98ff, #f3f6f9, #c2cfe0);
+            background-size: 400% 400%;
+            animation: gradientMotion 15s ease infinite;
+            color: #333333;
+        }
+
+        /* Анимация фона */
+        @keyframes gradientMotion {
+            0% { background: linear-gradient(45deg, #6a98ff, #f3f6f9, #c2cfe0); }
+            50% { background: linear-gradient(45deg, #f3f6f9, #c2cfe0, #6a98ff); }
+            100% { background: linear-gradient(45deg, #6a98ff, #f3f6f9, #c2cfe0); }
+        }
+
+        /* Основной стиль для контейнера */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Заголовок */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
             color: #fff;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        header p {
+            font-size: 1.1em;
+            color: #fff;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        /* Блоки с информацией */
         .section-title {
-            font-size: 2.2em;
             text-align: center;
-            margin-top: 30px;
-            color: #9146ff;
-            text-transform: uppercase;
-        }
-
-        /* Стиль для блоков */
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
+            font-size: 2em;
+            margin: 30px 0;
         }
 
         .block {
-            background-color: #2c2f44;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
-            width: 48%;
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .block:hover {
-            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .block h3 {
-            font-size: 1.5em;
             margin-bottom: 15px;
-            color: #fff;
+            font-size: 1.5em;
+            color: #333;
         }
 
         .block ul {
-            padding-left: 0;
             list-style: none;
+            padding-left: 0;
         }
 
         .block ul li {
+            font-size: 1.1em;
             margin-bottom: 10px;
-            color: #aaa;
-        }
-
-        /* Стили для соц. сетей */
-        .social-links {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            color: #555;
         }
 
         .social-block {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            width: 48%;
-            text-align: center;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-block:hover {
-            background-color: #9146ff;
-            transform: scale(1.05);
-        }
-
-        .social-block i {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .social-block a {
-            color: #fff;
-            font-size: 1.2em;
-        }
-
-        /* Стиль блока "Обо мне" */
-        .about-me {
-            background-color: #2c2f44;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            color: #ddd;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
             font-size: 1.1em;
+            transition: background-color 0.3s;
         }
 
-        .about-me p {
-            margin-bottom: 15px;
+        .social-block a:hover {
+            background-color: #ffcc00;
         }
 
-        .about-me strong {
-            color: #9146ff;
+        /* Стили для блоков социальных сетей */
+        .social-block a.twitch {
+            background-color: #6441a5;
         }
 
-        /* Анимации */
-        @keyframes gradientMotion {
-            0% {
-                background: linear-gradient(45deg, #6a98ff, #f3f6f9, #c2cfe0);
-            }
-
-            50% {
-                background: linear-gradient(45deg, #f3f6f9, #c2cfe0, #6a98ff);
-            }
-
-            100% {
-                background: linear-gradient(45deg, #6a98ff, #f3f6f9, #c2cfe0);
-            }
+        .social-block a.twitch:hover {
+            background-color: #9b5de5;
         }
 
-        .container {
-            animation: gradientMotion 15s ease infinite;
-            background-size: 400% 400%;
+        .social-block a.telegram {
+            background-color: #0088cc;
         }
 
-        /* Мобильная адаптация */
-        @media screen and (max-width: 768px) {
-            .social-block,
-            .block {
-                width: 100%;
-            }
+        .social-block a.telegram:hover {
+            background-color: #55acee;
+        }
 
-            .social-links {
-                justify-content: center;
-            }
+        .social-block a.tiktok {
+            background-color: #000;
+        }
 
-            .section-title {
-                font-size: 1.8em;
-            }
+        .social-block a.tiktok:hover {
+            background-color: #ff005f;
+        }
+
+        .social-block a.donate {
+            background-color: #ff5f00;
+        }
+
+        .social-block a.donate:hover {
+            background-color: #ff6f20;
+        }
+
+        .social-block a.meme {
+            background-color: #00c7a3;
+        }
+
+        .social-block a.meme:hover {
+            background-color: #1bd9b0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Добро пожаловать на мой стримерский сайт</h1>
-            <p>Привет! Я Sasha__Savage, и это мой сайт. Здесь ты найдешь информацию обо мне, моем оборудовании, социальных сетях и многое другое. Присоединяйся к моим стримам и давай развивать это сообщество вместе!</p>
-        </header>
 
-        <!-- Блок "Обо мне" -->
-        <div class="section-title">Обо мне</div>
-        <div class="about-me">
-            <p>Привет, я — Sasha__Savage, стример, который создает уютную атмосферу для всех зрителей! Я начал стримить, чтобы делиться своими увлечениями, играть и помогать зрителям расслабиться и по-настоящему насладиться процессом. На моих стримах всегда будет весело и интересно!</p>
-            <p>Моя цель — создать дружелюбное и активное сообщество, где каждый может чувствовать себя как дома. Присоединяйся и давай развиваться вместе!</p>
-            <p>Здесь нет места скучным моментам, всегда будут свежие идеи и классные стримы!</p>
-        </div>
+<div class="container">
+    <header>
+        <h1>Sasha__Savage</h1>
+        <p>Добро пожаловать на мой стримерский сайт!</p>
+    </header>
 
-        <!-- Блок "Оборудование" -->
-        <div class="section-title">Оборудование</div>
-        <div class="section">
-            <!-- Блок с характеристиками ПК -->
-            <div class="block">
-                <h3>Характеристики</h3>
-                <ul>
-                    <li><strong>Видеокарта:</strong> Palit RTX 5080 GamingPro 16gb</li>
-                    <li><strong>Процессор:</strong> Ryzen 9 9950 X3D</li>
-                    <li><strong>Материнская плата:</strong> MSI MAG X870 Tomahawk WiFi</li>
-                    <li><strong>Оперативная память:</strong> Adata XPG Lancer Blade RGB 32gb 6400</li>
-                    <li><strong>ССД:</strong> Adata Legend 960 Max 2tb</li>
-                    <li><strong>Блок питания:</strong> DeepCool GameStorm PN1200M</li>
-                    <li><strong>Корпус:</strong> DeepCool CC560 V2</li>
-                    <li><strong>Башенный кулер:</strong> DeepCool Assasin IV</li>
-                    <li><strong>Доп. вентиляторы:</strong> Arctic P14 PWM PST Value Pack (5x140мм)</li>
-                </ul>
-            </div>
-
-            <!-- Блок с периферией -->
-            <div class="block">
-                <h3>Периферия</h3>
-                <ul>
-                    <li><strong>Монитор 1:</strong> 27" Acer Nitro XV272UF3bmiiprx</li>
-                    <li><strong>Монитор 2:</strong> 27" MSI PRO MP271</li>
-                    <li><strong>Мышь:</strong> Lunacy One White</li>
-                    <li><strong>Клавиатура:</strong> Lunacy In Space 98</li>
-                    <li><strong>Коврик:</strong> Lunacy Outlines XL</li>
-                    <li><strong>Наушники:</strong> Logitech G733 LightSpeed</li>
-                    <li><strong>Микро:</strong> Fifine AmpliGame A9</li>
-                    <li><strong>Вебка:</strong> ZET GAMING Cyclop 2 M100R2</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Блок с социальными сетями -->
+    <section class="social-links">
         <div class="section-title">Ссылки на всё</div>
-        <div class="social-links">
-            <div class="social-block">
-                <i class="fab fa-twitch"></i>
-                <a href="https://www.twitch.tv/sasha__savage" target="_blank">Twitch</a>
-            </div>
-            <div class="social-block">
-                <i class="fab fa-telegram"></i>
-                <a href="https://t.me/alx_savage" target="_blank">Telegram</a>
-            </div>
-            <div class="social-block">
-                <i class="fab fa-tiktok"></i>
-                <a href="https://www.tiktok.com/@sasha__savage" target="_blank">TikTok</a>
-            </div>
-            <div class="social-block">
-                <i class="fas fa-donate"></i>
-                <a href="https://www.donationalerts.com/r/sasha__savage"
+        <div class="social-block">
+            <a href="https://www.twitch.tv/sasha__savage" target="_blank" class="twitch">Twitch</a>
+            <a href="https://t.me/alx_savage" target="_blank" class="telegram">Telegram</a>
+            <a href="https://www.tiktok.com/@sasha__savage" target="_blank" class="tiktok">TikTok</a>
+            <a href="https://www.donationalerts.com/r/sasha__savage" target="_blank" class="donate">Поддержать донатом</a>
+            <a href="https://memealerts.com/sasha__savage" target="_blank" class="meme">Отправить мем</a>
+        </div>
+    </section>
 
+    <section class="equipment">
+        <div class="section-title">Оборудование</div>
+        <div class="block">
+            <h3>Характеристики</h3>
+            <ul>
+                <li>Видеокарта: Palit RTX 5080 GamingPro 16gb</li>
+                <li>Процессор: Ryzen 9 9950 X3D</li>
+                <li>Материнская плата: MSI MAG X870 Tomahawk WiFi</li>
+                <li>Оперативная память: Adata XPG Lancer Blade RGB 32gb 6400</li>
+                <li>ССД: Adata Legend 960 Max 2tb</li>
+                <li>Блок питания: DeepCool GameStorm PN1200M</li>
+                <li>Корпус: DeepCool CC560 V2</li>
+                <li>Башенный кулер: DeepCool Assasin IV</li>
+                <li>Доп. Вентиляторы: Arctic P14 PWM PST Value Pack (5x140мм)</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>Периферия</h3>
+            <ul>
+                <li>Монитор 1: 27" Acer Nitro XV272UF3bmiiprx</li>
+                <li>Монитор 2: 27" MSI PRO MP271</li>
+                <li>Мышь: Lunacy One White</li>
+                <li>Клавиатура: Lunacy In Space 98</li>
+                <li>Коврик: Lunacy Outlines XL</li>
+                <li>Наушники: Logitech G733 LightSpeed</li>
+                <li>Микро: Fifine AmpliGame A9</li>
+                <li>Вебка: ZET GAMING Cyclop 2 M100R2</li>
+            </ul>
+        </div>
+    </section>
 
-
-
-
-
-ChatGPT сказал:
-target="_blank">Поддержать донатом</a>
+    <section class="about">
+        <div class="section-title">Обо мне</div>
+        <div class="block">
+            <p>Привет! Я стример на Twitch, где делаю различные стримы по играм и общению. Моя цель — создать комфортную атмосферу для зрителей, делиться опытом, и делать это весело! Следите за мной на моих социальных сетях, поддерживайте меня донатом, отправляйте мемы и давайте общаться!</p>
+        </div>
+    </section>
 </div>
-<div class="social-block">
-<i class="fas fa-image"></i>
-<a href="https://memealerts.com/sasha__savage" target="_blank">Отправить мем</a>
-</div>
-</div>
-</div>
 
-</body> </html> ```
+</body>
+</html>
